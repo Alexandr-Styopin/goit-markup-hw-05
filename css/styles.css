@@ -364,6 +364,9 @@ body {
 }
 .label {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .label::before {
   content: "";
@@ -377,8 +380,8 @@ body {
 }
 .label-text {
   position: absolute;
-  bottom: 0px;
-  padding: 27px 82px;
+  bottom: 27px;
+
   font-weight: 700;
   font-size: 14px;
 
@@ -751,7 +754,7 @@ body {
 
   width: 528px;
   height: 581px;
-
+  border-radius: 4px;
   background-color: var(--modal-bg-color);
 
   transform: translate(-50%, -50%) scale(1);
@@ -759,7 +762,7 @@ body {
 }
 .close-modal-btn {
   position: absolute;
-  top: 18px;
+  top: 8px;
   right: 8px;
   display: flex;
   justify-content: center;
