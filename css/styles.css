@@ -371,10 +371,12 @@ body {
 
 .label-text {
   position: absolute;
+  bottom: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
+
   font-weight: 700;
   font-size: 14px;
 
@@ -740,9 +742,11 @@ body {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
+  visibility: visible;
 }
 .modal {
   position: absolute;
