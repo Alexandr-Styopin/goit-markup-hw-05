@@ -10,6 +10,8 @@
   --hero-background: #2f303a;
   --client-logo: #afb1b8;
   --contact-icon-color: #757575;
+  --specialization-bg-color: rgba(47, 48, 58, 0.8);
+  --specialization-text-color: #ffffff;
   --soc-icon-bg-color: #ffffff;
   --soc-icon-color: #afb1b8;
   --soc-icon-hover-color: #ffffff;
@@ -154,12 +156,11 @@ body {
   bottom: -5px;
   border-radius: 2px;
   background-color: var(--accent-color);
-
-  opacity: 0;
-  transition: opacity 250ms var(--cubic-bezier);
+  transform: scaleX(0);
+  transition: transform 250ms var(--cubic-bezier);
 }
 .menu-link:hover::after {
-  opacity: 1;
+  transform: scaleX(1);
 }
 /* --------------------header contact---- */
 
@@ -361,7 +362,30 @@ body {
 
   color: var(--title-text-color);
 }
+.label {
+  position: relative;
+}
+.label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--specialization-bg-color);
 
+  width: 100%;
+  height: 70px;
+}
+.label-text {
+  position: absolute;
+  bottom: 0px;
+  padding: 27px 82px;
+  font-weight: 700;
+  font-size: 14px;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--specialization-text-color);
+}
 /* -----------------team------------------*/
 
 .saction-team {
